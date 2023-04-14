@@ -24,32 +24,24 @@ class MemoryGame {
   }
 
   checkIfPair(card1, card2) {
-    if (card1, card2) {
-      this.pairsClicked++;
-    } 
+    
+  this.pairsClicked++;
     
     if (card1 === card2) {
       this.pairsGuessed++;
-    } 
-    
-    if (card1 === card2) {
       return true;
-    } else if (card1 !== card2) {
-      return false
+    } else {
+      return false;
     }
+    
     
   }
 
   checkIfFinished() {
-    if (this.pairsGuessed === 0) {
+    if (this.pairsGuessed < (this.cards.length / 2)) {
       return false
-    } 
-    
-    
-    if (this.pairsGuessed < 24 / 2) {
-      return false
-    } else if (this.pairsGuessed === 24 / 2) {
+    } else {
       return true
-    }   
+    }    
   }
 }
